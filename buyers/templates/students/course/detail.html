@@ -1,0 +1,31 @@
+{% extends "base.html" %} 
+{% block title %}
+{{ object.title }}
+{% endblock %}
+{% block content %}
+<h1>
+{{ subcategory.title }}
+</h1>
+<div class="contents">
+<h3>subcategories</h3> <ul id="subcategories">
+{% for s in object.subcategories.all %}
+<li data-id="{{ s.id }}" {% if s == subcategory %} class="selected"
+{% endif %}>
+<a href="{% url "buyer_product_detail_subcategory" object.id s.id %}">
+<span>
+Subcategory <span class="order">{{ s.order|add:1 }}</span> 
+</span>
+<br>
+{{ s.title }}
+</a>
+ </li>
+
+{% empty %}
+<li>No subcategories yet.</li> {% endfor %}
+</ul> </div>
+<div class="subcategory">
+{% for content in subcategory.contents.all %}
+{% with item=content.item %} <h2>{{ item.title }}</h2> {{ item.render }}
+{% endwith %} {% endfor %}
+</div>
+{% endblock %}

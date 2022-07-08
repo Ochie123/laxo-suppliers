@@ -1,0 +1,220 @@
+[
+{
+  "model": "categories.category",
+  "pk": 1,
+  "fields": {
+    "title": "Home",
+    "slug": "home",
+    "meta_keywords": "furniture, chairs, sofa, stools",
+    "meta_description": "best sofas, cozy beds"
+  }
+},
+{
+  "model": "categories.category",
+  "pk": 2,
+  "fields": {
+    "title": "Farm",
+    "slug": "farm",
+    "meta_keywords": "farm equipments, low price equipment",
+    "meta_description": "farm equipments, low price equipment"
+  }
+},
+{
+  "model": "categories.category",
+  "pk": 3,
+  "fields": {
+    "title": "Apparel",
+    "slug": "apparel",
+    "meta_keywords": "clothes cheap clothes",
+    "meta_description": "clothes in kenya shop clothes in bulk"
+  }
+},
+{
+  "model": "categories.category",
+  "pk": 4,
+  "fields": {
+    "title": "Utensils",
+    "slug": "utensils",
+    "meta_keywords": "cups, cutlery spoon",
+    "meta_description": "cups, cutlery spoon"
+  }
+},
+{
+  "model": "categories.category",
+  "pk": 5,
+  "fields": {
+    "title": "Grocery",
+    "slug": "grocery",
+    "meta_keywords": "grocery fruits, spinach",
+    "meta_description": "grocery fruits, spinach"
+  }
+},
+{
+  "model": "categories.category",
+  "pk": 6,
+  "fields": {
+    "title": "Foodstuff",
+    "slug": "foodstuff",
+    "meta_keywords": "cereals legumes",
+    "meta_description": "cereals legumes"
+  }
+},
+{
+  "model": "categories.product",
+  "pk": 2,
+  "fields": {
+    "owner": 2,
+    "category": 1,
+    "title": "Sofa",
+    "is_active": true,
+    "is_bestseller": false,
+    "is_featured": false,
+    "brand": "Harley",
+    "sku": "123",
+    "price": "20.00",
+    "old_price": "250.00",
+    "quantity": 12,
+    "slug": "sofa",
+    "meta_keywords": "best sofa, cheap sofas in Kenya",
+    "meta_description": "best sofa, cheap sofas in Kenya",
+    "overview": "19th century sofa",
+    "created": "2022-07-06T13:35:40.029",
+    "buyers": [
+      4
+    ]
+  }
+},
+{
+  "model": "categories.product",
+  "pk": 3,
+  "fields": {
+    "owner": 3,
+    "category": 1,
+    "title": "Bed",
+    "is_active": true,
+    "is_bestseller": false,
+    "is_featured": false,
+    "brand": "UK",
+    "sku": "23",
+    "price": "123.00",
+    "old_price": "125.00",
+    "quantity": 12,
+    "slug": "bed",
+    "meta_keywords": "bed",
+    "meta_description": "bed",
+    "overview": "Best bed in the market",
+    "created": "2022-07-06T17:35:45.396",
+    "buyers": []
+  }
+},
+{
+  "model": "categories.product",
+  "pk": 4,
+  "fields": {
+    "owner": 2,
+    "category": 2,
+    "title": "Axe",
+    "is_active": true,
+    "is_bestseller": false,
+    "is_featured": false,
+    "brand": "axeman",
+    "sku": "12",
+    "price": "10.00",
+    "old_price": "15.00",
+    "quantity": 23,
+    "slug": "axe",
+    "meta_keywords": "axe",
+    "meta_description": "axe",
+    "overview": "Best axe",
+    "created": "2022-07-07T14:09:26.227",
+    "buyers": []
+  }
+},
+{
+  "model": "categories.product",
+  "pk": 5,
+  "fields": {
+    "owner": 2,
+    "category": 2,
+    "title": "jambe",
+    "is_active": true,
+    "is_bestseller": false,
+    "is_featured": false,
+    "brand": "jambe",
+    "sku": "jembe",
+    "price": "15.00",
+    "old_price": "20.00",
+    "quantity": 45,
+    "slug": "jambe",
+    "meta_keywords": "jambe",
+    "meta_description": "jembeee",
+    "overview": "best jembe",
+    "created": "2022-07-07T14:10:34.755",
+    "buyers": []
+  }
+},
+{
+  "model": "categories.product",
+  "pk": 6,
+  "fields": {
+    "owner": 2,
+    "category": 1,
+    "title": "Jug",
+    "is_active": true,
+    "is_bestseller": false,
+    "is_featured": false,
+    "brand": "Aristocrat's",
+    "sku": "34",
+    "price": "15.00",
+    "old_price": "24.00",
+    "quantity": 3,
+    "slug": "jug",
+    "meta_keywords": "jug",
+    "meta_description": "jug kenya",
+    "overview": "best jug",
+    "created": "2022-07-07T14:12:05.615",
+    "buyers": []
+  }
+},
+{
+  "model": "categories.subcategory",
+  "pk": 1,
+  "fields": {
+    "product": 2,
+    "title": "Sitting",
+    "description": "Furniture",
+    "order": 0
+  }
+},
+{
+  "model": "categories.subcategory",
+  "pk": 2,
+  "fields": {
+    "product": 3,
+    "title": "Home",
+    "description": "dhjdu",
+    "order": 0
+  }
+},
+{
+  "model": "categories.content",
+  "pk": 1,
+  "fields": {
+    "subcategory": 1,
+    "content_type": 7,
+    "object_id": 1,
+    "order": 0
+  }
+},
+{
+  "model": "categories.image",
+  "pk": 1,
+  "fields": {
+    "owner": 2,
+    "title": "sofa",
+    "created": "2022-07-06T13:38:49.966",
+    "updated": "2022-07-06T13:38:49.966",
+    "file": "images/Finance_fshtoKE.jpg"
+  }
+}
+]

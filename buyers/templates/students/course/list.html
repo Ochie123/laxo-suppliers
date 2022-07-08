@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %}My Products{% endblock %} 
+{% block content %}
+<h1>My products</h1> <div class="subcategory">
+{% for product in object_list %} 
+<div class="product-info">
+<h3>{{ product.title }}</h3>
+<p><a href="{% url "buyer_product_detail" product.id %}"> Access contents</a></p>
+</div>
+{% empty %}
+<p>
+You haven't added any products yet.
+<a href="{% url "product_list" %}">Browse products</a> to buy in a product.
+</p>
+{% endfor %}
+</div>
+{% endblock %}
