@@ -145,3 +145,6 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 from django.urls import reverse_lazy
 LOGIN_REDIRECT_URL = reverse_lazy('buyer_product_list')
+
+import django_heroku
+django_heroku.settings(locals())
