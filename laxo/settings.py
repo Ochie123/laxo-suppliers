@@ -32,7 +32,6 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    "django_bootstrap_breadcrumbs",
     'buyers.apps.BuyersConfig',
     'categories.apps.CategoriesConfig',
     'django.contrib.admin',
