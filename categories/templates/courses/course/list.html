@@ -94,10 +94,10 @@ Shop more for less
                   <!-- Card img -->
                   <div class="position-relative">
                     <a class="card-product_item" href="{% url "product_detail" product.slug %}">
-                    
-                    <img class="card-img"  src="{% if product.image %}{{ product.image.url }}{% else %}
-                    {% static "img/no_image.png" %} alt="Product" class="img-fluid"
-                    {% endif %}">
+
+                    <img class="card-img" src="{% if product.image %}{{ product.image.url }}{% else %}
+                    {% static "images/no_image.png" %}{% endif %}">
+
                     <div class="card-img-overlay d-flex align-items-start flex-column p-3">
                       <!-- Card overlay Top -->
                       <div class="w-100 mb-auto d-flex justify-content-end">
@@ -116,9 +116,9 @@ Shop more for less
                           </a> 
                           </h3>
                       <h5 class="mb-0 text-primary"> 
-                          Was: <del>$ {{ product.old_price }}</del> <br />
+                          Was: <del>Ksh {{ product.old_price }}</del> <br />
                           <br>
-                          Now: ${{ product.price }}</h5>
+                          Now: Kes: {{ product.price }}</h5>
                   </div>
                     <!-- Card info -->
                       </a>

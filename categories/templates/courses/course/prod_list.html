@@ -50,15 +50,14 @@
             <a class="card-product_item" href="{% url "product_detail" product.slug %}">
                 <div class="body">
                     <div class="cp_img">
-                        <img src="{% if product.image %}{{ product.image.url }}{% else %}
-                        {% static "img/no_image.png" %} alt="Product" class="img-fluid"
-                        {% endif %}"> 
+                      <img src="{% if product.image %}{{ product.image.url }}{% else %}
+                      {% static "images/no_image.png" %}{% endif %}">
                     </div>
                     <div class="product_details">
                         <h5> <a href="{% url "product_detail" product.slug %}"> {{ product.title }}</a> </h5>
                         <ul class="product_price list-unstyled">
-                            <li class="old_price">Was: <del>$ {{ product.old_price }}</del></li>
-                            <li class="new_price">Now: <span class="badge badge-danger">${{ product.price }}</span></li>
+                            <li class="old_price">Was: <del>Kes: {{ product.old_price }}</del></li>
+                            <li class="new_price">Now: <span class="badge badge-danger">Kes: {{ product.price }}</span></li>
                         </ul>
                     </div>
                 </div>

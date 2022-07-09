@@ -1,5 +1,5 @@
 {% extends "base.html" %} 
-
+{% load static %}
 {% include "category.html" %}
 
 {% load static %}
@@ -27,19 +27,22 @@
                           <div class="carousel-inner">
                               <!-- Slide 1 -->
                               <div class="item active">
-                                {% if item.image %}
-                                <img class="card-img" src="{{ product.image.url }}" class="img-responsive" alt="product image">
-                                {% else %}
-                                <img class="card-img" src="{{ product.image.url }}" class="img-responsive" alt="">
-                                {% endif %}
+                              
+
+                                <img class="card-img" src="{% if product.image %}{{ product.image.url }}{% else %}
+                                {% static "images/no_image.png" %}{% endif %}"  class="img-responsive">
                               </div>
                               <!-- Slide 2 -->
                               <div class="item">
-                                  <img src="{{ product.image2.url }}" class="img-responsive" alt="">
+                                <img src="{% if product.image2 %}{{ product.image2.url }}{% else %}
+                                {% static "images/no_image.png" %}{% endif %}">
+
                               </div>
                               <!-- Slide 3 -->
                               <div class="item">
-                                  <img src="{{ product.image3.url }}" class="img-responsive" alt="">
+                                <img src="{% if product.image3 %}{{ product.image3.url }}{% else %}
+                                {% static "images/no_image.png" %}{% endif %}">
+
                               </div>
                           </div>
                           <a class="left carousel-control" href="#myCarousel-2" data-slide="prev"> <span class="glyphicon glyphicon-chevron-left"></span> </a>
@@ -62,13 +65,13 @@
                   </h2>
                   <hr />
                   <h3 class="price-container">
-                      Was: <del>$ {{ product.old_price }}</del> <br/>  Now: <span class="badge badge-danger">${{ product.price }}</span></h5>
+                      Was: <del>Kes: {{ product.old_price }}</del> <br/>  Now: <span class="badge badge-danger">Kes: {{ product.price }}</span></h5>
                       <small>*includes tax</small>
                   </h3>
                   <div class="certified">
                       <ul>
                           <li>
-                              <a href="javascript:void(0);">Delivery time<span>7 Working Days</span></a>
+                              <a href="javascript:void(0);">Delivery time<span>24 hours</span></a>
                           </li>
                           <li>
                               <a href="javascript:void(0);">Brand<span>{{ product.brand }}</span></a>
@@ -103,9 +106,9 @@
                               <br />
                               <dl class="">
                                   
-                                  <dd>Etiam porta sem malesuada magna mollis euismod.</dd>
-                                  <dd>Donec id elit non mi porta gravida at eget metus.</dd>
-                                  <dd>Eget lacinia odio sem nec elit.</dd>
+                                  <dd>Please contact this number for delivery.</dd>
+                                  <dd><p>To order by telephone, <a href="tel:+254793683851">please call +254793683851</a></p></dd>
+                                  <dd>laxosuppliers.com</dd>
                               </dl>
                           </div>
                           <div class="tab-pane fade" id="reviews">
@@ -115,13 +118,7 @@
                   <hr />
                   <div class="row">
                       <div class="col-sm-12 col-md-6 col-lg-6">
-                          <a href="javascript:void(0);" class="btn btn-success btn-lg">Add to cart ($129.54)</a>
-                      </div>
-                      <div class="col-sm-12 col-md-6 col-lg-6">
-                          <div class="btn-group pull-right">
-                              <button class="btn btn-white btn-default"><i class="fa fa-star"></i> Add to wishlist</button>
-                              <button class="btn btn-white btn-default"><i class="fa fa-envelope"></i> Contact Seller</button>
-                          </div>
+                          <a href="tel:+254793683851" class="btn btn-success btn-lg">Contact Seller</a>
                       </div>
                   </div>
               </div>
